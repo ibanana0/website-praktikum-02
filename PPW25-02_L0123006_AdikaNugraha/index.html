@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Sederhana Lanjutan CSS</title>
+    <link rel="stylesheet" href="style.css">    <!-- Menghubungkan ke style.css -->
+    
+    <!-- Ambil font API dari Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,700;1,14..32,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <section id="header__html-logo">
+                <img src="assets/header__html-logo.png" alt="html_logo">
+                <h1 class="font__inter">HTML</h1>
+                <h2 class="font__inter">Hypertext Markup Language </h2>
+            </section>
+            <section id="header__content">
+                <section id="header__content__definition">
+                    <h2 class="font__inter-h2" style="font-size: 3.5rem;">What is HTML?</h2>
+                    <p class="font__lexend-paragraph">HTML is the standard markup language for documents designed to be displayed in a web browser. It defines the content and structure of web content. It is often assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript, a programming language.</p>
+                </section>
+                <section id="header__content__image">
+                    <img src="assets/header__html-code-scapshot.png" alt="html-code-scapshot" id="header__content__definition__html-code-scapshot">
+                </section>
+            </section>
+        </header>
+        <nav>
+            <h2 class="font__inter" style="font-size: 3rem; padding-left: 2vw;">Table of Content</h2>
+            <ul>
+                <a href="#main__history"><li class="font__lexend-paragraph">History</li></a>
+                <a href="#main__versions"><li class="font__lexend-paragraph">HTML Versions Timeline</li></a>
+                <a href="#main__elements"><li class="font__lexend-paragraph">Elemenets in HTML</li></a>
+                <a href="#main__semantic"><li class="font__lexend-paragraph">Semantic HTML</li></a>
+                <a href="#main__comments"><li class="font__lexend-paragraph">Comment Section</li></a>
+            </ul>
+        </nav>
+        <main>
+            <article id="main__content">
+                <article id="main__history">
+                    <section id="main__history__text">
+                        <h2 class="font__inter-h2">History</h2>
+                        <p class="font__lexend-paragraph">
+                            The first version of HTML was written by <a href="https://en.wikipedia.org/wiki/Tim_Berners-Lee">Tim Berners-Lee</a> in 1993. 
+                            Since then, there have been many different versions of HTML. The most widely used version throughout 
+                            the 2000's was HTML 4.01, which became an official standard in December 1999. Another version, XHTML, 
+                            was a rewrite of HTML as an XML language.
+                        </p>
+                    </section>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/LS3_4919_%28cropped%29.jpg/945px-LS3_4919_%28cropped%29.jpg" alt="tim-berners-lee">
+                </article>
+                <article id="main__versions">
+                    <h2 class="font__inter-h2" style="margin-bottom: 5vh;">HTML Versions Timeline</h2>
+                    <section id="main__versions__text">
+                        <article id="html-2">
+                            <h3 class="font__inter-h3">HTML 2</h3>
+                            <p class="font__lexend-paragraph">
+                                HTML 2.0, published as RFC 1866 in <b>November 24, 1995</b>, defined the capabilities 
+                                of HTML in common use prior to June 1994, creating a specification for 
+                                interoperability among HTML implementations. 
+                            </p>
+                        </article>
+                        <article id="html-3">
+                            <h3 class="font__inter-h3">HTML 3</h3>
+                            <p class="font__lexend-paragraph">
+                                In <b>January 14, 1997</b>, an HTML 3.0 specification was released. Based upon earlier 
+                                work on HTML+, extends HTML 2.0 to support tables, text flow around figures and 
+                                math. This document has expired. It is no longer being maintained.
+                            </p>
+                        </article>
+                        <article id="html-4">
+                            <h3 class="font__inter-h3">HTML 4</h3>
+                            <p class="font__lexend-paragraph">
+                                In <b>December 18, 1997</b> HTML 4.0 was published as a W3C Recommendation. 
+                                It offers three variations:
+                            </p>
+                            <ul class="font__lexend-paragraph">
+                                <li>Strict, in which deprecated elements are forbidden</li>
+                                <li>Transitional, in which deprecated elements are allowed</li>
+                                <li>Frameset, in which mostly only frame related elements are allowed</li>
+                            </ul>
+                        </article>
+                        <article id="html-5">
+                            <h3 class="font__inter-h3">HTML 5</h3>
+                            <p class="font__lexend-paragraph">
+                                HTML5 was first released in a public-facing form on 22 January 2008, with a major 
+                                update and "W3C Recommendation" status in October 2014. Its goals were to 
+                                improve the language with support for the latest multimedia and other new features; 
+                                to keep the language both easily readable by humans and consistently understood by computers 
+                                and devices such as web browsers, parsers, etc., without XHTML's rigidity; and to remain 
+                                backward-compatible with older software. HTML5 is intended to subsume not only HTML 4 but also 
+                                XHTML1 and even the DOM Level 2 HTML itself.
+                            </p>
+                        </article>
+                    </section>
+                </article>
+                <article id="main__elements">
+                    <section id="main__elements__definition" style="margin-bottom: 3vh;">
+                        <h2 class="font__inter-h2">Elements</h2>
+                        <p class="font__lexend-paragraph">
+                            In HTML, an element is the fundamental building block of a webpage, 
+                            consisting of a start tag, optional content, and an end tag, which together 
+                            define a specific part of the document's structure and content. 
+                        </p>
+                    </section>
+                    <section id="main__elements__table">
+                        <table class="font__lexend">
+                            <caption class="font__inter"> <i>Table List of Elements</i> </caption>
+                            <tr class="font__inter">
+                                <th>Elements</th>
+                                <th>Definition</th>
+                                <th>Usage Example</th>
+                            </tr>
+                            <tr class="main__elements__table-lighter font__lexend-paragraph">
+                                <td>Heading</td>
+                                <td>
+                                    In HTML, headings are titles or subtitles displayed on a
+                                    webpage, defined using the &lt;h1&gt; to &lt;h6&gt; tags, with
+                                    &lt;h1&gt; being the most important and &lt;h6&gt; the least.
+                                </td>
+                                <td>
+                                    <code>&lt;h1&gt;This is Title using h1 tag element&lt;/h1&gt;</code> <br>
+                                </td>
+                            </tr>
+                            <tr class="font__lexend-paragraph"> 
+                                <td>Paragraph</td>
+                                <td>
+                                    A paragraph in HTML is simply a block of text enclosed within the &lt;p&gt; tag
+                                </td>
+                                <td>
+                                    <code>
+                                        &lt;p&gt;This is paragraph Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                                        Ad quidem in, autem ducimus totam eveniet sit dolorem sapiente voluptates at rerum beatae, 
+                                        labore doloremque necessitatibus adipisci fugiat debitis nobis. Omnis.&lt;/p&gt;
+                                    </code>
+                                    <br>
+                                </td>
+                            </tr>
+                            <tr class="main__elements__table-lighter font__lexend-paragraph">
+                                <td>Line Breaks</td>
+                                <td>
+                                    Tag in HTML used to create a line break in the text, causing the content that follows it to appear on a new line
+                                </td>
+                                <td>
+                                    <code>
+                                        &lt;p&gt; This is paragraph 1 &lt;/p&gt; <br>
+                                        &lt;br&gt; <br>
+                                        &lt;p&gt; This is paragraph 2 &lt;/p&gt;
+                                    </code>
+                                </td>
+                            </tr>
+                        </table>
+                    </section>
+                </article>
+                <article id="main__semantic">
+                    <section id="main__semantic-definition">
+                        <h2 class="font__inter-h2">Semantic HTML</h2>
+                        <p class="font__lexend-paragraph">
+                            Semantic HTML is the use of HTML markup to reinforce the semantics, or meaning, of the information in web 
+                            pages and web applications rather than merely to define its presentation or look. Semantic HTML is processed 
+                            by traditional web browsers as well as by many other user agents.
+                        </p>
+                    </section>
+                    <figure>
+                        <section id="main__semantic__non-semantic-container">
+                            <p class="font__lexend-paragraph" style="text-align: center; font-style:italic;">Non-Semantic HTML</p>
+                            <img src="assets/semantic-html__non-semantic-img.png" alt="Non Semantic HTML">
+                        </section>
+                        <section id="main__semantic__semantic-container">
+                            <p class="font__lexend-paragraph" style="text-align: center; font-style:italic;">Semantic HTML</p>
+                            <img src="assets/semantic-html__semantic-img.png" alt="Semantic HTML">
+                        </section>
+                    </figure>
+                    <figcaption class="font__lexend" style="text-align: center;"><i>Semantic HTML Layout</i></figcaption>
+                </article>
+                <article id="main__comments">
+                    <h2 class="font__inter" style="font-size: 3rem;">Comment Section</h2>
+                    <form class="font__lexend">
+                        <section id="main__comments-login">
+                            <section id="main__comments-login__username">
+                                <label for="comments__username" class="">Username</label>
+                                <input type="text" placeholder="username" id="comments__username" class="font__lexend-paragraph" style="border-radius: 5px;">
+                            </section>
+                            <section id="main__comments-login__password">
+                                <label for="comments__password">Password</label>
+                                <input type="password" placeholder="password" id="comments__password" class="font__lexend-paragraph" style="border-radius: 5px;">
+                            </section>
+                            <br>
+                        </section>
+                        <section id="main__comments-text-area">
+                            <textarea style="resize: none; border-radius:10px; padding: 1vw; font-size: 1rem" rows="10" cols="130" id="comments__text-area" placeholder="Your comment..."></textarea>
+                        </section>
+                        <button type="submit" class="font__inter" >Submit</button>
+                    </form>
+                </article>
+            </article>
+        </main>
+        <aside>
+            <figcaption class="font__inter">Logo</figcaption>
+            <figure>
+                <a href="https://en.wikipedia.org/wiki/HTML"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/260px-HTML5_logo_and_wordmark.svg.png" id="logo-html" alt="Logo HTML"></a>
+            </figure>
+            <section id="aside__table">
+                <table class="font__lexend-paragraph">
+                    <tr>
+                        <th style="font-weight: 400;">Filename Extension</th>
+                        <td><code>.html, .htm</code></td>
+                    </tr>
+                    <tr>
+                        <th style="font-weight: 400;">Internet Media Type</th>
+                        <td><code>text/html</code></td>
+                    </tr>
+                    <tr>
+                        <th style="font-weight: 400;">Type Code</th>
+                        <td><code>TEXT</code></td>
+                    </tr>
+                    <tr>
+                        <th style="font-weight: 400;">Develop by</th>
+                        <td>WHATWG World Wide Web Consortium (W3C; formerly)</td>
+                    </tr>
+                    <tr>
+                        <th style="font-weight: 400;">Initial Release</th>
+                        <td>22 January 2008 (17 years ago)</td>
+                    </tr>
+                    <tr>
+                        <th style="font-weight: 400;">Latest Release</th>
+                        <td>5.2 (Second revision) 14 December 2017 (7 years ago)</td>
+                    </tr>
+                </table>
+            </section>
+        </aside>
+        <footer class="font__lexend">
+            <p>Author: Adika Nugraha</p>
+            <p>Email: <a href="mailto:adikanugraha2425@gmail.com">adikanugraha2425@gmail.com</a></p>
+            <p>Instagram: <a href="instagram.com/adikanuu">@adikanuu</a></p>
+            <br>
+            <br>
+            <p style="text-align: center;">made with love &#x2665;&#xfe0e;</p>
+        </footer>
+    </div>
+</body>
+</html>

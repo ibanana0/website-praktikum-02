@@ -1,0 +1,364 @@
+*{
+    /* Agar padding dan margin secara default = 0 */
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+    scroll-snap-type: y mandatory;
+}
+html, body{
+    /* Mengatur warna default */
+    background-color: #272727;
+}
+body::-webkit-scrollbar:vertical{
+    /* Agar tidak bisa overscroll ke atas */
+    display: none;
+}
+body{
+    overflow-x: hidden;
+}
+.font__inter-h2{
+    font-family: "Inter", sans-serif;
+    font-size: 5rem;
+    color: white;
+}
+.font__inter-h3{
+    font-family: "Inter", sans-serif;
+    font-size: 1.75rem;
+    margin-bottom: 2vh;
+    color: white;
+}
+.font__lexend-paragraph{
+    font-family: "Lexend", sans-serif;
+    font-size: 1rem;
+    font-weight: 100;
+    color: white;
+}
+.font__inter{
+    font-family: "Inter", sans-serif;
+    color: white;
+}
+.font__lexend{
+    font-family: "Lexend", sans-serif;
+    color: white;
+}
+
+
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 
+    1fr 
+    1fr 
+    1fr 
+    1fr
+    0.2fr;
+    grid-template-areas: 
+    "header header header header header"
+    "nav main main main aside"
+    "nav main main main aside"
+    "nav main main main aside"
+    "footer footer footer footer footer";
+}
+header{
+    grid-area: header;
+    display: flex;
+    flex-direction: column; /* Arah flex dari atas ke bawah */
+    align-items: center;  /* Agar elemen align di tengah secara horizontal (tidak vertikal karena arah flex merupakan column) */
+    justify-content: center;    /* Agar elemen align di tengah secara vertikal (tidak horizontal karena arah flex merupakan column) */
+    margin-top: 30vh;
+    margin-bottom: 13vh;
+}
+nav{
+    grid-area: nav;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 2vh;
+    padding-bottom: 4vh;
+    background-color: #373737;
+    color: white;
+    border: solid #5F5F5F;
+    border-radius: 0 35px 0 0;
+}
+nav ul{
+    width: 100%;
+}
+nav li{
+    padding-left: 2vw;
+    padding-block: 1vh;
+    font-weight: 150;
+    list-style: none;
+    width: 100%;
+    transition-timing-function: ease;
+    transition-duration: 500ms;
+}
+nav li:hover{
+    background-color: #434343;
+    font-size: 1.2rem;
+    font-weight: 350;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+main{
+    grid-area: main;
+    margin-inline: 3vw;
+    display: flex;
+    flex-direction: column;
+}
+aside{
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: fit-content;
+    background-color: #373737;
+    color: white;
+    padding: 1vw;
+    padding-block: 2vh;
+    border-radius: 35px;
+    transition-timing-function: ease;
+    transition-duration: 500ms;
+}
+footer{
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 3vh;
+    font-size: 1.3rem;
+    font-weight: 200;
+    background-color: #E44D26;
+}
+
+
+#header__html-logo{
+    display: flex;
+    flex-direction: column; /* Arah flex dari atas ke bawah */
+    align-items: center;  /* Agar elemen align di tengah secara horizontal (tidak vertikal karena arah flex merupakan column) */
+    justify-content: center;    /* Agar elemen align di tengah secara vertikal (tidak horizontal karena arah flex merupakan column) */
+}
+#header__html-logo img{
+    width: 15vw;
+}
+#header__html-logo h1{
+    font-weight: 900;
+    font-size: 7rem;
+    color: white;
+}
+#header__html-logo h2{
+    font-size: 2.5rem;
+    color: white;
+    margin-top: -20px;
+}
+#header__content{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 13vh;
+    gap: 5vw;
+    width: 90vw;
+}
+#header__content__definition{
+    background-color: #E44D26;
+    border-radius: 35px;
+    padding: 5vw;
+    padding-top: 10vh;
+    max-width: 40vw;
+    transition-timing-function: ease;
+    transition-duration: 500ms;
+}
+#header__content__definition:hover{
+    padding-left: 7vw;
+    background-color: #fc4c00;
+    text-shadow: white 0 0 8px;
+}
+#header__content__definition__html-code-scapshot{
+    width: 40vw;
+    object-fit: contain;
+    transition-timing-function: ease;
+    transition-duration: 500ms;
+}
+#header__content__definition__html-code-scapshot:hover{
+    width: 43vw;
+    filter: brightness(150%) contrast(115%) saturate(200%);
+}
+
+
+#main__history{
+    margin-bottom: 13vh;
+    display: flex;
+    background-color: #E44D26;
+    border-radius: 35px;
+    transition-timing-function: ease;
+    transition-duration: 500ms;
+    overflow: hidden;
+}
+#main__history img{
+    width: 20vw;
+}
+#main__history__text{
+    padding-top: 3vw;
+    padding-left: 3vw;
+    padding-right: 3vw;
+    display: flex;
+    flex-direction: column;
+}
+#main__history:hover{
+    background-color: #fc4c00;
+    text-shadow: white 0 0 8px;
+}
+
+
+#main__versions article{
+    margin-bottom: 3vh;
+    padding: 3vw;
+    border-radius: 20px;
+    transition-timing-function: ease;
+    transition-duration: 500ms;
+}
+#main__versions article:hover{
+    text-shadow: white 0 0 8px;
+    padding-left: 5vw;
+}
+#html-2{
+    background-color: #373737; 
+}
+#html-3{
+    background-color: #5F5F5F; 
+}
+#html-4{
+    background-color: #90351E; 
+}
+#html-4 ul{
+    font-weight: 100;
+    margin-left: 1vw;
+}
+#html-5{
+    background-color: #E44D26; 
+}
+
+
+#main__elements {
+    margin-top: 13vh;
+    color: white;
+    margin-bottom: 13vh;
+}
+#main__elements table{
+    border: none;
+    border-collapse: collapse;
+}
+#main__elements__table tr{
+    vertical-align:text-top;
+    height: 3vh;
+}
+#main__elements__table th{
+    padding: 1vw;
+    background-color: #E44D26;
+}
+#main__elements__table td{
+    padding: 1vw;
+    font-weight: 150;
+    transition-duration: 500ms;
+    transition-timing-function: ease;
+}
+#main__elements__table td:hover{
+    padding-left: 1.5vw;
+    text-shadow: 0 0 5px white;
+}
+.main__elements__table-lighter{
+    background-color: #373737;
+}
+
+
+#main__semantic{
+    margin-bottom: 13vh;
+}
+#main__semantic figure{
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+    gap: 2vw;
+    margin-top: 5vh;
+    margin-bottom: 0.5vh;
+}
+#main__semantic img{
+    width: 23vw;
+}
+
+
+#main__comments-login{
+    display: flex;
+    flex-direction: column;
+}
+#main__comments-login__username{
+    width: 17vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#main__comments-login__password{
+    width: 17vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#main__comments textarea, input{
+    background-color: #5F5F5F;
+    font-weight: 100;
+    color: white;
+    padding: 0.2vw;
+    padding-inline: 0.5vw;
+    outline: none;
+    margin-block: 1vh;
+    border: none;
+    font-family: "Lexend", sans-serif;
+}
+#main__comments textarea::placeholder, input::placeholder{
+    color: white;
+    opacity: 0.5;
+    font-style: italic;
+}
+#main__comments button{
+    font-size: 2rem;
+    font-weight: 600;
+    color: white;
+    background-color: #fc4c00;
+    padding: 0.5vw;
+    padding-inline: 3vw;
+    border-radius: 10px;
+    border: none;
+    transition-timing-function: ease;
+    transition-duration: 500ms;
+}
+#main__comments button:hover{
+    background-color: #ff560e;
+    text-shadow: white 0 0 5px;
+}
+
+
+aside img{
+    margin-top: 1vh;
+    margin-bottom: 5vh;
+    width: 10vw;
+}
+aside figcaption{
+    font-weight: 600;
+    text-align: center;
+}
+aside th {
+    width: 10vw;
+}
+aside tr{
+    text-align: left;
+    vertical-align:text-top;
+    height: 3vh;
+}
+aside:hover{
+    background-color: #434343;
+    text-shadow: white 0 0 8px;
+}

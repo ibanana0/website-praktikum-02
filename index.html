@@ -178,24 +178,26 @@
                     </figure>
                     <figcaption class="font__lexend" style="text-align: center;"><i>Semantic HTML Layout</i></figcaption>
                 </article>
-                <article id="main__comments">
+                <article id="main__comments" class="font__lexend">
                     <h2 class="font__inter" style="font-size: 3rem;">Comment Section</h2>
-                    <form class="font__lexend">
-                        <section id="main__comments-login">
-                            <section id="main__comments-login__username">
-                                <label for="comments__username" class="">Username</label>
-                                <input type="text" placeholder="username" id="comments__username" class="font__lexend-paragraph" style="border-radius: 5px;">
+                    <section id="main__comments-login-to-comment" class="font__inter">
+                        <p>You must <a onclick="openForm()" style="cursor:pointer">logged</a> to post a comment</p>
+                    </section>
+                    <form action="" id="login-form" class="font__lexend">
+                        <div id="login-form-container">
+                            <section id="login__username-section">
+                                <label for="login__username">Username</label>
+                                <input type="text" id="login__username">
                             </section>
-                            <section id="main__comments-login__password">
-                                <label for="comments__password">Password</label>
-                                <input type="password" placeholder="password" id="comments__password" class="font__lexend-paragraph" style="border-radius: 5px;">
+                            <section id="login__password-section">
+                                <label for="login__password">Password</label>
+                                <input type="password" id="login__password">
                             </section>
-                            <br>
-                        </section>
-                        <section id="main__comments-text-area">
-                            <textarea style="resize: none; border-radius:10px; padding: 1vw; font-size: 1rem" rows="10" cols="130" id="comments__text-area" placeholder="Your comment..."></textarea>
-                        </section>
-                        <button type="submit" class="font__inter" >Submit</button>
+                            <section id="button-section">
+                                <button id="login-btn" type="submit">Login</button>
+                                <button id="cancel-btn" onclick="closeForm()" type="button">Cancel</button>
+                            </section>
+                        </div>
                     </form>
                 </article>
             </article>
@@ -237,11 +239,12 @@
         <footer class="font__lexend">
             <p>Author: Adika Nugraha</p>
             <p>Email: <a href="mailto:adikanugraha2425@gmail.com">adikanugraha2425@gmail.com</a></p>
-            <p>Instagram: <a href="instagram.com/adikanuu">@adikanuu</a></p>
+            <p>Instagram: <a href="https://instagram.com/adikanuu">@adikanuu</a></p>
             <br>
             <br>
             <p style="text-align: center;">made with love &#x2665;&#xfe0e;</p>
         </footer>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>
